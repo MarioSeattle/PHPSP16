@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mySQL.seattletoursinspanish.com',
-	'username' => 'msea',
-	'password' => 'sounders1',
-	'database' => 'marioitc250',
+	'hostname' => 'phpsp.seattletoursinspanish.com',
+	'username' => 'mphp',
+	'password' => 'spring16',
+	'database' => 'phpsp16',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
