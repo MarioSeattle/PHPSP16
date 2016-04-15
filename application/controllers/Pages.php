@@ -11,7 +11,7 @@ class Pages extends CI_Controller {
 
             $data['title'] = ucfirst($page); // Capitalize the first letter
                
-            $data['title'] = "My clever page ID, in Header!;
+            $data['page_id']="My clever page ID, in Header!";
             $this->load->view('templates/header', $data);
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer', $data);
