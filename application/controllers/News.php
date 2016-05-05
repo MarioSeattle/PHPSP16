@@ -60,16 +60,16 @@ class News extends CI_Controller {
         {//Data, so enter add it!
             $slug = $this->news_model->set_news();
             
-           if($slug)
- +            {//data present, load view
- +                feedback('News item successfully created!','notice');
- +                redirect('/news/view/' . $slug);
- +                
- +            }else{//we have an issue!
- +                feedback('News item NOT created!','warning');
- +                redirect('/news/create');
- + 
-              } 
+            if($slug)
+             {//data present, load view
+                 feedback('News item successfully created!','notice');
+                 redirect('/news/view/' . $slug);
+                 
+             }else{//we have an issue!
+                 feedback('News item NOT created!','warning');
+                 redirect('/news/create');
+  
+              }
             
            
             }

@@ -1,6 +1,7 @@
 <?php
 //News_model.php
 class News_model extends CI_Model {
+
         public function __construct()
         {
                 $this->load->database();
@@ -14,9 +15,11 @@ class News_model extends CI_Model {
                     $query = $this->db->get('sp16_news');
                     return $query->result_array();
             }
+
             $query = $this->db->get_where('sp16_news', array('slug' => $slug));
             return $query->row_array();
     }
+    
     
     public function set_news()
     {
@@ -28,22 +31,15 @@ class News_model extends CI_Model {
             'title' => $this->input->post('title'),
             'slug' => $slug,
             'text' => $this->input->post('text')
-            );
-        
+        );
+
         if($this->db->insert('sp16_news', $data))
-        {//good data show reccord!
-           
-            return $slug;
-            
-            
-        }else{//Bad data ?? Feedback
-            
-            return false
+        {//good data, show record!
+ 
+        }else{//bad data?  feedback!
+
         }
 
-        //return $this->db->insert('sp16_news', $data);
     }
-       
-    
-}
 
+}
