@@ -31,18 +31,14 @@ class News_model extends CI_Model {
             );
         
         if($this->db->insert('sp16_news', $data))
-        {//good data show reccords
-            $id = $this->db->insert_id();
-            die;
-            
-            
-            $query = $this->db->get_where('sp16_news', array('id' => $id));
-            return $query->row_array();
+        {//good data show reccord!
+           
+            return $slug;
             
             
         }else{//Bad data ?? Feedback
-            echo "Ohh Ohh";
-            die;
+            
+            return false
         }
 
         //return $this->db->insert('sp16_news', $data);
